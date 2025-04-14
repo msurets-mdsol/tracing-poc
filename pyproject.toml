@@ -1,0 +1,27 @@
+[project]
+name = "tracing-poc"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Maxim Surets",email = "msurets@mdsol.com"}
+]
+readme = "README.md"
+requires-python = ">=3.8.1,<4.0.0"
+dependencies = [
+]
+
+[tool.poetry]
+package-mode = false 
+
+[tool.poetry.group.dev.dependencies]
+motel = {git = "https://github.com/mdsol/motel-python.git"}
+
+
+[[tool.poetry.source]]
+name = "pypi-prod-virtual"
+url = "https://mdsol.jfrog.io/artifactory/api/pypi/pypi-prod-virtual/simple"
+priority = "primary"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
